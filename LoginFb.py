@@ -35,15 +35,18 @@ time.sleep(2)
 
 
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(2)
-likes = driver.find_elements_by_xpath(
-    "//div[@class='tvfksri0 ozuftl9m']//div[@aria-label='Thích']")
+time.sleep(5)
+# likes = driver.find_elements_by_xpath(
+#     "//div[@class='tvfksri0 ozuftl9m']//div[@aria-label='Thích']")
+likes = driver.find_elements_by_xpath("//div[@class='tvfksri0 ozuftl9m']//span[text() = 'Thích']")
 actions = ActionChains(driver)
 print(len(likes))
 time.sleep(5)
+
 for i in range(0, 6):
     actions.move_to_element(likes[i]).perform()
     driver.execute_script("arguments[0].click();", likes[i])
+driver.quit()
 
 
 
