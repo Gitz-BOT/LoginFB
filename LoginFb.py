@@ -17,6 +17,7 @@ driver.maximize_window()
 
 #link dẫn tới trang web
 driver.get ("https://vi-vn.facebook.com")
+time.sleep(2)
 
 # tìm id email và nhập email
 email = driver.find_element_by_id('email')
@@ -43,7 +44,7 @@ actions = ActionChains(driver)
 print(len(likes))
 time.sleep(5)
 
-for i in range(0, 6):
+for i in range(1, 5):
     actions.move_to_element(likes[i]).perform()
     driver.execute_script("arguments[0].click();", likes[i])
 driver.quit()
