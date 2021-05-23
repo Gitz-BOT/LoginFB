@@ -21,12 +21,12 @@ time.sleep(2)
 
 # tìm id email và nhập email
 email = driver.find_element_by_id('email')
-email.send_keys("bothuan24680@gmail.com")
+email.send_keys("@gmail.com")
 time.sleep(2)
 
 # tìm id pass và nhập pass
 passw = driver.find_element_by_id('pass')
-passw.send_keys("Th0186997")
+passw.send_keys("")
 time.sleep(2)
 
 # tìm name login và đăng nhập
